@@ -1,0 +1,27 @@
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.people_back{
+    width: 400px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: url('./back.jpg') center center;
+}
+.people_pic img{
+    margin-bottom: 50px;
+    /* z-index: 2; */
+}
+.people_bio_back{
+    background-color: #fff;
+    box-shadow: 1px 1px 2px 2px #ccc;
+    width: 70%;
+    height: fit-content;
+    margin:  auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+.people_bio_back ul li{
+    margin: 15px auto;
+}
