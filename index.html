@@ -1,72 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>ACM IIIT-D</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>ACM IIIT-D</title>
+</head>
 
-    <body class="bg-gray-50 text-gray-600">
-        <div class="bg-blue-900 lg:h-28 flex place-items-center place-content-center text-gray-100">
-            <div class="w-4/5 lg:flex-row-reverse flex flex-col-reverse text-xl">
-                <a href="#" class="ml-10 lg:mt-0 mt-6 lg:mb-0 mb-8">Contact us</a>
-                <a href="#" class="ml-10 lg:mt-0 mt-6">Blogs</a>
-                <a href="/people.html" class="ml-10 lg:mt-0 mt-6">Members</a>
-                <a href="#" class="ml-10 lg:mt-0 mt-6">About us</a>
-                <a href="#" class="ml-10 lg:mt-0 mt-6">Home</a>
+<body class="bg-gray-50 text-gray-600 font-sans">
+    <header class="text-gray-600 body-font bg-indigo-900">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+                    viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl text-yellow-300">ACM IIIT-D</span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 text-white hover:text-yellow-300" href="#">Home</a>
+                <a class="mr-5 text-white hover:text-yellow-300" href="#">About us</a>
+                <a class="mr-5 text-white hover:text-yellow-300" href="people.html">Members</a>
+                <a class="mr-5 text-white hover:text-yellow-300" href="#">Blogs</a>
+                <a class="mr-5 text-white hover:text-yellow-300" href="#">Contact us</a>
+            </nav>
+        </div>
+    </header>
+    <section class="flex place-content-center">
+        <div class="w-4/5">
+            <section class="text-gray-600 body-font">
+                <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+                    <div
+                        class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                        <h1 class="title-font lg:text-6xl text-4xl font-black mb-4 font-medium text-gray-900">ACM
+                            Chapter</h1>
+                        <h1 class="z-40 relative lg:text-4xl text-2xl font-light">IIIT-D</h1><br>
+                        <h1 class="z-40 relative lg:text-2xl text-1xl font-light">Another word</h1><br>
+                        <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra
+                            air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage
+                            hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
+                    </div>
+                    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                        <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+                    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+                        <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+                    </div>
+                    <div
+                        class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">About IIIT-D
+                        </h1>
+                        <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra
+                            air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage
+                            hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="text-gray-600 body-font">
+                <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+                    <div
+                        class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">About ACM IIIT-D
+                        </h1>
+                        <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra
+                            air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage
+                            hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
+                    </div>
+                    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                        <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+                    </div>
+                </div>
+            </section>
+            <section class="text-gray-600 body-font">
+                <div class="container px-5 py-24 mx-auto">
+                    <div class="flex flex-col text-center w-full mb-20">
+                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Our Team</h1>
+                        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon
+                            brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't
+                            heard of them.</p>
+                    </div>
+                    <div class="flex flex-wrap -m-2">
+                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                                <img alt="team"
+                                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                                    src="https://dummyimage.com/80x80">
+                                <div class="flex-grow">
+                                    <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
+                                    <p class="text-gray-500">Founder</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                                <img alt="team"
+                                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                                    src="https://dummyimage.com/84x84">
+                                <div class="flex-grow">
+                                    <h2 class="text-gray-900 title-font font-medium">Henry Letham</h2>
+                                    <p class="text-gray-500">Founder</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                                <img alt="team"
+                                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                                    src="https://dummyimage.com/88x88">
+                                <div class="flex-grow">
+                                    <h2 class="text-gray-900 title-font font-medium">Oskar Blinde</h2>
+                                    <p class="text-gray-500">Founder</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                                <img alt="team"
+                                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                                    src="https://dummyimage.com/90x90">
+                                <div class="flex-grow">
+                                    <h2 class="text-gray-900 title-font font-medium">John Doe</h2>
+                                    <p class="text-gray-500">Core Member</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                                <img alt="team"
+                                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                                    src="https://dummyimage.com/94x94">
+                                <div class="flex-grow">
+                                    <h2 class="text-gray-900 title-font font-medium">Martin Eden</h2>
+                                    <p class="text-gray-500">Core Member</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                                <img alt="team"
+                                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                                    src="https://dummyimage.com/98x98">
+                                <div class="flex-grow">
+                                    <h2 class="text-gray-900 title-font font-medium">Boris Kitua</h2>
+                                    <p class="text-gray-500">Core Member</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                                <img alt="team"
+                                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                                    src="https://dummyimage.com/100x90">
+                                <div class="flex-grow">
+                                    <h2 class="text-gray-900 title-font font-medium">Atticus Finch</h2>
+                                    <p class="text-gray-500">Fresher</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                                <img alt="team"
+                                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                                    src="https://dummyimage.com/104x94">
+                                <div class="flex-grow">
+                                    <h2 class="text-gray-900 title-font font-medium">Alper Kamu</h2>
+                                    <p class="text-gray-500">Fresher</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                                <img alt="team"
+                                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                                    src="https://dummyimage.com/108x98">
+                                <div class="flex-grow">
+                                    <h2 class="text-gray-900 title-font font-medium">Rodrigo Monchi</h2>
+                                    <p class="text-gray-500">Fresher</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-center mt-4">
+                        <button
+                            class="inline-flex text-white bg-indigo-700 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Meet our entire team</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <footer class="text-gray-600 body-font bg-indigo-800">
+        <div
+            class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+            <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
+                <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2"
+                        class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                    <span class="ml-3 text-xl text-yellow-300">ACM IIIT-D</span>
+                </a>
+                <p class="mt-2 text-sm text-white">Air plant banjo lyft occupy retro adaptogen indego</p>
+            </div>
+            <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-yellow-400 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-white hover:text-yellow-300" href="#">First Link</a>
+                        </li>
+                        <li>
+                            <a class="text-white hover:text-yellow-300" href="#">Second Link</a>
+                        </li>
+                        <li>
+                            <a class="text-white hover:text-yellow-300" href="#">Third Link</a>
+                        </li>
+                        <li>
+                            <a class="text-white hover:text-yellow-300" href="#">Fourth Link</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-yellow-400 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-white hover:text-yellow-300" href="#">First Link</a>
+                        </li>
+                        <li>
+                            <a class="text-white hover:text-yellow-300" href="#">Second Link</a>
+                        </li>
+                        <li>
+                            <a class="text-white hover:text-yellow-300" href="#">Third Link</a>
+                        </li>
+                        <li>
+                            <a class="text-white hover:text-yellow-300" href="#">Fourth Link</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-yellow-400 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-white hover:text-yellow-300" href="#">First Link</a>
+                        </li>
+                        <li>
+                            <a class="text-white hover:text-yellow-300" href="#">Second Link</a>
+                        </li>
+                        <li>
+                            <a class="text-white hover:text-yellow-300" href="#">Third Link</a>
+                        </li>
+                        <li>
+                            <a class="text-white hover:text-yellow-300" href="#">Fourth Link</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-yellow-400 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-white hover:text-yellow-300" href="#">First Link</a>
+                        </li>
+                        <li>
+                            <a class="text-white hover:text-yellow-300" href="#">Second Link</a>
+                        </li>
+                        <li>
+                            <a class="text-white hover:text-yellow-300" href="#">Third Link</a>
+                        </li>
+                        <li>
+                            <a class="text-white hover:text-yellow-300" href="#">Fourth Link</a>
+                        </li>
+                    </nav>
+                </div>
             </div>
         </div>
-        <section class="flex place-content-center">
-            <div class="w-4/5 mt-16">
-                <!-- <div class="flex-row-reverse place-content-center">
-                <a href="#">
-                    <i class="fa fa-instagram fa-2x text-gray-600"></i>
-                </a>
-                <a href="#">
-                    <i class="fa fa-envelope fa-2x text-gray-600"></i>
-                </a>
-            </div> -->
-                <div class="lg:flex lg:place-content-between sm:place-content-center">
-                    <div>
-                        <div class="relative">
-                            <div
-                                class="lg:w-96 md:w-72 w-32 lg:h-12 h-8 z-10 absolute left-24 -bottom-2 bg-yellow-400 opacity-50">
-                            </div>
-                            <h1 class="z-40 relative lg:text-8xl text-6xl font-black">ACM Chapter</h1><br>
-                            <h1 class="z-40 relative lg:text-6xl text-5xl font-light">IIIT-D</h1><br>
-                            <h1 class="z-40 relative lg:text-6xl text-4xl font-light">Another word</h1>
-                        </div>
-                        <div class="lg:w-2/4 mt-6">
-                            <span class="lg:text-xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi
-                                voluptatum ut eligendi nostrum! Accusantium</span>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <img class="w-48 h-72 lg:w-56 lg:h-80 relative z-20 mt-10"
-                            src="https://upload.wikimedia.org/wikipedia/commons/2/2b/1601Broadway.jpg">
-                        <div
-                            class="absolute w-48 h-72 lg:w-56 lg:h-80 z-10 block bg-yellow-400 lg:-bottom-10 lg:-right-10 -bottom-6 left-6 opacity-50">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex place-content-center my-24">
-                    <h1 class="text-4xl"><a href="#about-iiitd"><i class="fa fa-arrow-down"></i></a></h1>
-                </div>
-                <div class="flex place-content-center">
-                    <h1 class="lg:text-8xl text-6xl font-black" id="about-iiitd">About IIIT-D</h1><br>
-                </div>
-                <div class="flex place-content-center my-10">
-                    <!-- <span class="lg:text-xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi
-                        voluptatum ut eligendi nostrum! Accusantium</span> -->
-                    <a href="https://imgflip.com/i/4w83f3"><img src="https://i.imgflip.com/4w83f3.jpg" class="w-96" title="made at imgflip.com"/></a>
-                </div>
+        <div class="bg-indigo-900">
+            <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+                <p class="text-white text-sm text-center sm:text-left"> Website created and managed by
+                    <a href="https://github.com/YuvrajSingh808" rel="noopener noreferrer"
+                        class="text-white hover:text-yellow-300 ml-1" target="_blank">Yuvraj Singh</a>
+                </p>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                    <a class="ml-3 text-white hover:text-yellow-300">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-white hover:text-yellow-300">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-white hover:text-yellow-300">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-white hover:text-yellow-300">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path stroke="none"
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                            </path>
+                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                        </svg>
+                    </a>
+                </span>
             </div>
-        </section>
-
-    </body>
+        </div>
+    </footer>
+</body>
 
 </html>
