@@ -1,326 +1,612 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="/dist/tailwind.css">
-    <title>ACM IIIT-D</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <!-- <link rel="shortcut icon" href="./assets/img/favicon.ico" /> -->
+  <link rel="apple-touch-icon" sizes="76x76" href="https://dummyimage.com/76x76" />
+  <link rel="shortcut icon" type="image/x-icon" href="/src/Images/logo.png" />
+  <script src="https://kit.fontawesome.com/08e69763c2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/dist/tailwind.css">
+  <title>ACM IIIT Delhi | Student Chapter</title>
 </head>
 
-<body class="bg-gray-50 text-gray-600 font-sans">
-    <header class="text-gray-600 body-font bg-indigo-900 sticky top-0">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                <img src="/src/Images/logo.png" height="35" width="35">
-                <span class="ml-3 text-xl text-yellow-300">ACM IIIT-D</span>
-            </a>
-            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                <a class="mr-5 text-white hover:text-yellow-300" href="#">Home</a>
-                <a class="mr-5 text-white hover:text-yellow-300" href="people.html">Members</a>
-                <a class="mr-5 text-white hover:text-yellow-300" href="#">Blogs</a>
-                <a class="mr-5 text-white hover:text-yellow-300" href="#">Resources</a>
-                <a class="mr-5 text-white hover:text-yellow-300" href="#">Contact us</a>
-                <a class="mr-5 text-white hover:text-yellow-300" href="./src/alt-index.html">Alt homepage</a>
-            </nav>
+<body class="text-gray-800 antialiased">
+  <nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
+    <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+      <img src="/src/Images/logo.png" height="35" width="35" class="mr-8">
+      <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+        <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white"
+          href="#">ACM IIIT-Delhi
+        </a>
+        <button
+          class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+          type="button" onclick="toggleNavbar('example-collapse-navbar')">
+          <i class="text-white fa fa-bars"></i>
+        </button>
+      </div>
+      <div class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
+        id="example-collapse-navbar">
+        <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+          <li class="flex items-center">
+            <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+              href="https://www.facebook.com/acmiiitd/"><i
+                class="lg:text-gray-300 hover:text-blue-800 text-gray-500 fab fa-facebook text-lg leading-lg "></i><span
+                class="lg:hidden inline-block ml-2">Facebook</span></a>
+          </li>
+          <li class="flex items-center">
+            <a class="lg:text-white lg:hover:text-red-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+              href="https://twitter.com/acmiiitd"><i
+                class="lg:text-gray-300 hover:text-blue-600 text-gray-500 fab fa-twitter text-lg leading-lg "></i><span
+                class="lg:hidden inline-block ml-2">Twitter</span></a>
+          </li>
+          <li class="flex items-center">
+            <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+              href="https://instagram.com/acmiiitd/"><i
+                class="lg:text-gray-300 text-gray-500 fab fa-instagram text-lg leading-lg "></i><span
+                class="lg:hidden inline-block ml-2">Instagram</span></a>
+          </li>
+          <li class="flex items-center">
+            <button
+              class="lg:text-white hover:text-gray-800 active:bg-yellow-100 text-xs font-bold uppercase px-4 py-2 rounded hover:bg-white border-1 border-white focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+              type="button" style="transition: all 0.15s ease 0s;">
+              Blog
+            </button>
+            <button
+              class="lg:text-white hover:text-gray-800 active:bg-yellow-100 text-xs font-bold uppercase px-4 py-2 rounded hover:bg-white border-1 border-white focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+              type="button" style="transition: all 0.15s ease 0s;">
+              Events
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 75vh;">
+      <div class="absolute top-0 w-full h-full bg-center bg-cover"
+        style='background-image: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80");'>
+        <span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span>
+      </div>
+      <div class="container relative mx-auto">
+        <div class="items-center flex flex-wrap">
+          <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+            <div class="pr-12">
+              <h1 class="text-white font-semibold text-5xl">
+                ACM IIIT Delhi Student Chapter
+              </h1>
+              <p class="mt-4 text-lg text-gray-300">
+                “ACM brings together computing educators, researchers, and professionals to inspire dialogue, share
+                resources, and address the field's challenges. As the world’s largest computing society, ACM strengthens
+                the profession's collective voice through strong leadership, promotion of the highest standards, and
+                recognition of technical excellence.”
+              </p>
+            </div>
+          </div>
         </div>
-    </header>
-    <section class="flex place-content-center">
-        <div class="w-4/5">
-            <section class="text-gray-600 body-font">
-                <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-                    <div
-                        class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                        <h1 class="title-font lg:text-6xl text-4xl font-black mb-4 font-medium text-gray-900">ACM
-                            Chapter</h1>
-                        <h1 class="z-40 relative lg:text-4xl text-2xl font-light">IIIT-D</h1><br>
-                        <h1 class="z-40 relative lg:text-2xl text-1xl font-light">Another word</h1><br>
-                        <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra
-                            air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage
-                            hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
-                    </div>
-                    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                        <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
-                    </div>
+      </div>
+      <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+        style="height: 70px; transform: translateZ(0px);">
+        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+          version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+          <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </div>
+    <section class="pb-20 bg-gray-300 -mt-24">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap">
+          <!-- <div class="w-full md:w-4/12 px-4 text-center">
+            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+              <div class="px-4 py-5 flex-auto">
+                <div
+                  class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                  <i class="fa fa-award"></i>
                 </div>
-            </section>
-            <section>
-                <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-                    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-                        <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
-                    </div>
-                    <div
-                        class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-                        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">About IIIT-D
-                        </h1>
-                        <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra
-                            air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage
-                            hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
-                    </div>
+                <h6 class="text-xl font-semibold">Something</h6>
+                <p class="mt-2 mb-4 text-gray-600">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, corrupti?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-4/12 px-4 text-center">
+            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+              <div class="px-4 py-5 flex-auto">
+                <div
+                  class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
+                  <i class="fa fa-retweet"></i>
                 </div>
-            </section>
-            <section class="text-gray-600 body-font">
-                <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-                    <div
-                        class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">About ACM IIIT-D
-                        </h1>
-                        <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra
-                            air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage
-                            hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
-                    </div>
-                    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                        <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
-                    </div>
+                <h6 class="text-xl font-semibold">Something</h6>
+                <p class="mt-2 mb-4 text-gray-600">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, corrupti?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-4/12 px-4 text-center">
+            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+              <div class="px-4 py-5 flex-auto">
+                <div
+                  class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
+                  <i class="fas fa-fingerprint"></i>
                 </div>
-            </section>
-            <section class="text-gray-600 body-font">
-                <div class="container px-5 py-24 mx-auto">
-                    <div class="flex flex-col text-center w-full mb-20">
-                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Our Team</h1>
-                        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon
-                            brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't
-                            heard of them.</p>
-                    </div>
-                    <div class="flex flex-wrap -m-2">
-                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                                <img alt="team"
-                                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                                    src="https://dummyimage.com/80x80">
-                                <div class="flex-grow">
-                                    <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
-                                    <p class="text-gray-500">Founder</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                                <img alt="team"
-                                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                                    src="https://dummyimage.com/84x84">
-                                <div class="flex-grow">
-                                    <h2 class="text-gray-900 title-font font-medium">Henry Letham</h2>
-                                    <p class="text-gray-500">Founder</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                                <img alt="team"
-                                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                                    src="https://dummyimage.com/88x88">
-                                <div class="flex-grow">
-                                    <h2 class="text-gray-900 title-font font-medium">Oskar Blinde</h2>
-                                    <p class="text-gray-500">Founder</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                                <img alt="team"
-                                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                                    src="https://dummyimage.com/90x90">
-                                <div class="flex-grow">
-                                    <h2 class="text-gray-900 title-font font-medium">John Doe</h2>
-                                    <p class="text-gray-500">Core Member</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                                <img alt="team"
-                                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                                    src="https://dummyimage.com/94x94">
-                                <div class="flex-grow">
-                                    <h2 class="text-gray-900 title-font font-medium">Martin Eden</h2>
-                                    <p class="text-gray-500">Core Member</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                                <img alt="team"
-                                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                                    src="https://dummyimage.com/98x98">
-                                <div class="flex-grow">
-                                    <h2 class="text-gray-900 title-font font-medium">Boris Kitua</h2>
-                                    <p class="text-gray-500">Core Member</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                                <img alt="team"
-                                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                                    src="https://dummyimage.com/100x90">
-                                <div class="flex-grow">
-                                    <h2 class="text-gray-900 title-font font-medium">Atticus Finch</h2>
-                                    <p class="text-gray-500">Fresher</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                                <img alt="team"
-                                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                                    src="https://dummyimage.com/104x94">
-                                <div class="flex-grow">
-                                    <h2 class="text-gray-900 title-font font-medium">Alper Kamu</h2>
-                                    <p class="text-gray-500">Fresher</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                            <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                                <img alt="team"
-                                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                                    src="https://dummyimage.com/108x98">
-                                <div class="flex-grow">
-                                    <h2 class="text-gray-900 title-font font-medium">Rodrigo Monchi</h2>
-                                    <p class="text-gray-500">Fresher</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex justify-center mt-4">
-                        <button
-                            class="inline-flex text-white bg-indigo-700 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Meet
-                            our entire team</button>
-                    </div>
+                <h6 class="text-xl font-semibold">Something</h6>
+                <p class="mt-2 mb-4 text-gray-600">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, corrupti?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+          <div class="flex flex-wrap items-center mt-32">
+            <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
+              <div
+                class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
+                <i class="fa fa-user-friends text-xl"></i>
+              </div>
+              <h3 class="text-3xl mb-2 font-semibold leading-normal">
+                What we represent?
+              </h3>
+              <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
+                At the IIIT-Delhi student chapter of ACM, we believe in developing an active and extensive platform
+                where
+                students can gain global exposure to a range of ideas and knowledge that the field of computing has
+                offered.
+              </p>
+              <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
+                Since our establishment in October 2009, we have aimed to propagate interest among students in computer
+                science, to provide opportunities to them that help them hone their computer science skills and
+                inculcate
+                the spirit of research in them. We are working relentlessly to achieve this aim through organizing
+                events
+                on different domains by speakers experienced in these areas. Under the guidance of our faculty advisor
+                Dr.
+                Rajiv Ratn Shah, we, ACM IIIT-Delhi Student Chapter are constantly evolving and growing towards
+                betterment.
+              </p>
+            </div>
+            <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
+                <img alt="..."
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
+                  class="w-full align-middle rounded-t-lg" />
+                <blockquote class="relative p-8 mb-4">
+                  <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
+                    class="absolute left-0 w-full block" style="height: 95px; top: -94px;">
+                    <polygon points="-30,95 583,95 583,65" class="text-pink-600 fill-current"></polygon>
+                  </svg>
+                  <h4 class="text-xl font-bold text-white">
+                    Why should you become an ACM Student Chapter Member?
+                  </h4>
+                  <p class="text-md font-light mt-2 text-white">
+                    Individuals who are members of Chapters are known as ACM Chapter Members; ACM Chapter Members are
+                    eligible for a number of member benefits. Click 'Read more' to know about them.
+                  </p>
+                </blockquote>
+                <div class="p-8 relative">
+                  <a href="#" class="pt-16 mt-2 text-white font-bold">Read more</a>
                 </div>
-            </section>
+              </div>
+            </div>
+          </div>
         </div>
     </section>
-
-    <footer class="text-gray-600 body-font bg-indigo-800">
-        <div
-            class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-            <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
-                <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="2"
-                        class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                    </svg>
-                    <span class="ml-3 text-xl text-yellow-300">ACM IIIT-D</span>
-                </a>
-                <p class="mt-2 text-sm text-white">Air plant banjo lyft occupy retro adaptogen indego</p>
+    <section class="relative py-20">
+      <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+        style="height: 80px; transform: translateZ(0px);">
+        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+          version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+          <polygon class="text-white fill-current" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+      <div class="container mx-auto px-4">
+        <div class="items-center flex flex-wrap">
+          <div class="w-full md:w-4/12 ml-auto mr-auto px-4">
+            <img alt="..." class="max-w-full rounded-lg shadow-lg"
+              src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80" />
+          </div>
+          <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
+            <div class="md:pr-12">
+              <div
+                class="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300">
+                <i class="fa fa-rocket text-xl"></i>
+              </div>
+              <h3 class="text-3xl font-semibold">Our Vision</h3>
+              <p class="mt-4 text-lg leading-relaxed text-gray-600">
+                “We see a world where computing helps solve tomorrow’s problems – where we use our knowledge and skills
+                to advance the profession and make a positive impact.” At ACM IIIT Delhi Student Chapter, we have some
+                clear directions towards which we make efforts & build our club. We majorly focus on the following
+                objectives :-
+              </p>
+              <ul class="list-none mt-6">
+                <li class="py-2">
+                  <div class="flex items-center">
+                    <div>
+                      <span
+                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i
+                          class="far fa-paper-plane"></i></span>
+                    </div>
+                    <div>
+                      <h4 class="text-gray-600">
+                        Working towards advancing computing as a science and a profession
+                      </h4>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="flex items-center">
+                    <div>
+                      <span
+                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i
+                          class="far fa-paper-plane"></i></span>
+                    </div>
+                    <div>
+                      <h4 class="text-gray-600">Serving as a dynamic hub of activities for the computing fraternity of
+                        IIIT Delhi</h4>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="flex items-center">
+                    <div>
+                      <span
+                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i
+                          class="far fa-paper-plane"></i></span>
+                    </div>
+                    <div>
+                      <h4 class="text-gray-600">Providing students a platform where they are exposed to a plethora of
+                        ideas, knowledge, and trends in computing</h4>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="flex items-center">
+                    <div>
+                      <span
+                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i
+                          class="far fa-paper-plane"></i></span>
+                    </div>
+                    <div>
+                      <h4 class="text-gray-600">Uniting educators, researchers, students, and professionals to inspire
+                        dialogue, share resources, and address the field’s challenges.</h4>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="flex items-center">
+                    <div>
+                      <span
+                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i
+                          class="far fa-paper-plane"></i></span>
+                    </div>
+                    <div>
+                      <h4 class="text-gray-600">Supporting its members’ professional growth by providing learning,
+                        networking, and career development opportunities.</h4>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="flex items-center">
+                    <div>
+                      <span
+                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i
+                          class="far fa-paper-plane"></i></span>
+                    </div>
+                    <div>
+                      <h4 class="text-gray-600">Creating interest among the students in various diverse topics of the
+                        computing field</h4>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="flex items-center">
+                    <div>
+                      <span
+                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i
+                          class="far fa-paper-plane"></i></span>
+                    </div>
+                    <div>
+                      <h4 class="text-gray-600">Fostering technical initiatives and innovation among students.</h4>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="flex items-center">
+                    <div>
+                      <span
+                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i
+                          class="far fa-paper-plane"></i></span>
+                    </div>
+                    <div>
+                      <h4 class="text-gray-600">Having a fun and enjoyable experience for its members!</h4>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
-                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-yellow-400 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                    <nav class="list-none mb-10">
-                        <li>
-                            <a class="text-white hover:text-yellow-300" href="#">First Link</a>
-                        </li>
-                        <li>
-                            <a class="text-white hover:text-yellow-300" href="#">Second Link</a>
-                        </li>
-                        <li>
-                            <a class="text-white hover:text-yellow-300" href="#">Third Link</a>
-                        </li>
-                        <li>
-                            <a class="text-white hover:text-yellow-300" href="#">Fourth Link</a>
-                        </li>
-                    </nav>
-                </div>
-                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-yellow-400 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                    <nav class="list-none mb-10">
-                        <li>
-                            <a class="text-white hover:text-yellow-300" href="#">First Link</a>
-                        </li>
-                        <li>
-                            <a class="text-white hover:text-yellow-300" href="#">Second Link</a>
-                        </li>
-                        <li>
-                            <a class="text-white hover:text-yellow-300" href="#">Third Link</a>
-                        </li>
-                        <li>
-                            <a class="text-white hover:text-yellow-300" href="#">Fourth Link</a>
-                        </li>
-                    </nav>
-                </div>
-                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-yellow-400 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                    <nav class="list-none mb-10">
-                        <li>
-                            <a class="text-white hover:text-yellow-300" href="#">First Link</a>
-                        </li>
-                        <li>
-                            <a class="text-white hover:text-yellow-300" href="#">Second Link</a>
-                        </li>
-                        <li>
-                            <a class="text-white hover:text-yellow-300" href="#">Third Link</a>
-                        </li>
-                        <li>
-                            <a class="text-white hover:text-yellow-300" href="#">Fourth Link</a>
-                        </li>
-                    </nav>
-                </div>
-                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-yellow-400 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                    <nav class="list-none mb-10">
-                        <li>
-                            <a class="text-white hover:text-yellow-300" href="#">First Link</a>
-                        </li>
-                        <li>
-                            <a class="text-white hover:text-yellow-300" href="#">Second Link</a>
-                        </li>
-                        <li>
-                            <a class="text-white hover:text-yellow-300" href="#">Third Link</a>
-                        </li>
-                        <li>
-                            <a class="text-white hover:text-yellow-300" href="#">Fourth Link</a>
-                        </li>
-                    </nav>
-                </div>
-            </div>
+          </div>
         </div>
-        <div class="bg-indigo-900">
-            <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                <p class="text-white text-sm text-center sm:text-left"> Website created and managed by
-                    <a href="https://github.com/YuvrajSingh808" rel="noopener noreferrer"
-                        class="text-white hover:text-yellow-300 ml-1" target="_blank">Yuvraj Singh</a>
+      </div>
+    </section>
+    <section class="pt-20 pb-48">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center text-center mb-24">
+          <div class="w-full lg:w-6/12 px-4">
+            <h2 class="text-4xl font-semibold">Our heroes</h2>
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+            <div class="px-6">
+              <img alt="..." src="https://dummyimage.com/800x800" class="shadow-lg rounded-full max-w-full mx-auto"
+                style="max-width: 120px;" />
+              <div class="pt-6 text-center">
+                <h5 class="text-xl font-bold">Ryan Tompson</h5>
+                <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                  Web Developer
                 </p>
-                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-                    <a class="ml-3 text-white hover:text-yellow-300">
-                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            class="w-5 h-5" viewBox="0 0 24 24">
-                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                        </svg>
-                    </a>
-                    <a class="ml-3 text-white hover:text-yellow-300">
-                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            class="w-5 h-5" viewBox="0 0 24 24">
-                            <path
-                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
-                            </path>
-                        </svg>
-                    </a>
-                    <a class="ml-3 text-white hover:text-yellow-300">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                        </svg>
-                    </a>
-                    <a class="ml-3 text-white hover:text-yellow-300">
-                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-                            <path stroke="none"
-                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
-                            </path>
-                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
-                        </svg>
-                    </a>
-                </span>
+                <div class="mt-6">
+                  <button class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fa fa-twitter"></i></button><button
+                    class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fa fa-facebook-f"></i></button><button
+                    class="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fa fa-dribbble"></i>
+                  </button>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+            <div class="px-6">
+              <img alt="..." src="https://dummyimage.com/800x800.jpg" class="shadow-lg rounded-full max-w-full mx-auto"
+                style="max-width: 120px;" />
+              <div class="pt-6 text-center">
+                <h5 class="text-xl font-bold">Romina Hadid</h5>
+                <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                  Marketing Specialist
+                </p>
+                <div class="mt-6">
+                  <button class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fa fa-google"></i></button><button
+                    class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fa fa-facebook-f"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+            <div class="px-6">
+              <img alt="..." src="https://dummyimage.com/800x800" class="shadow-lg rounded-full max-w-full mx-auto"
+                style="max-width: 120px;" />
+              <div class="pt-6 text-center">
+                <h5 class="text-xl font-bold">Alexa Smith</h5>
+                <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                  UI/UX Designer
+                </p>
+                <div class="mt-6">
+                  <button class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fa fa-google"></i></button><button
+                    class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fa fa-twitter"></i></button><button
+                    class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fa fa-instagram"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+            <div class="px-6">
+              <img alt="..." src="https://dummyimage.com/800x800" class="shadow-lg rounded-full max-w-full mx-auto"
+                style="max-width: 120px;" />
+              <div class="pt-6 text-center">
+                <h5 class="text-xl font-bold">Jenna Kardi</h5>
+                <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                  Founder and CEO
+                </p>
+                <div class="mt-6">
+                  <button class="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fa fa-dribbble"></i></button>
+                  <button class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fa fa-google"></i>
+                  </button>
+                  <button class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fa fa-twitter"></i></button>
+                  <button class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                    type="button">
+                    <i class="fa fa-instagram"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
+    <!-- <section class="pb-20 relative block bg-gray-900">
+      <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+        style="height: 80px; transform: translateZ(0px);">
+        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+          version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+          <polygon class="text-gray-900 fill-current" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div> -->
+    <!-- <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
+        <div class="flex flex-wrap text-center justify-center">
+          <div class="w-full lg:w-6/12 px-4">
+            <h2 class="text-4xl font-semibold text-white">Build something</h2>
+            <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
+              Put the potentially record low maximum sea ice extent tihs year
+              down to low ice. According to the National Oceanic and
+              Atmospheric Administration, Ted, Scambos.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-wrap mt-12 justify-center">
+          <div class="w-full lg:w-3/12 px-4 text-center">
+            <div
+              class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+              <i class="fa fa-medal text-xl"></i>
+            </div>
+            <h6 class="text-xl mt-5 font-semibold text-white">
+              Excelent Services
+            </h6>
+            <p class="mt-2 mb-4 text-gray-500">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content.
+            </p>
+          </div>
+          <div class="w-full lg:w-3/12 px-4 text-center">
+            <div
+              class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+              <i class="fa fa-poll text-xl"></i>
+            </div>
+            <h5 class="text-xl mt-5 font-semibold text-white">
+              Grow your market
+            </h5>
+            <p class="mt-2 mb-4 text-gray-500">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content.
+            </p>
+          </div>
+          <div class="w-full lg:w-3/12 px-4 text-center">
+            <div
+              class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+              <i class="fa fa-lightbulb text-xl"></i>
+            </div>
+            <h5 class="text-xl mt-5 font-semibold text-white">Launch time</h5>
+            <p class="mt-2 mb-4 text-gray-500">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- <section class="relative block py-24 lg:pt-0 bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
+          <div class="w-full lg:w-6/12 px-4">
+            <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
+              <div class="flex-auto p-5 lg:p-10">
+                <h4 class="text-2xl font-semibold">Want to work with us?</h4>
+                <p class="leading-relaxed mt-1 mb-4 text-gray-600">
+                  Complete this form and we will get back to you in 24 hours.
+                </p>
+                <div class="relative w-full mb-3 mt-8">
+                  <label class="block uppercase text-gray-700 text-xs font-bold mb-2" for="full-name">Full
+                    Name</label><input type="text"
+                    class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                    placeholder="Full Name" style="transition: all 0.15s ease 0s;" />
+                </div>
+                <div class="relative w-full mb-3">
+                  <label class="block uppercase text-gray-700 text-xs font-bold mb-2" for="email">Email</label><input
+                    type="email"
+                    class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                    placeholder="Email" style="transition: all 0.15s ease 0s;" />
+                </div>
+                <div class="relative w-full mb-3">
+                  <label class="block uppercase text-gray-700 text-xs font-bold mb-2"
+                    for="message">Message</label><textarea rows="4" cols="80"
+                    class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                    placeholder="Type a message..."></textarea>
+                </div>
+                <div class="text-center mt-6">
+                  <button
+                    class="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                    type="button" style="transition: all 0.15s ease 0s;">
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+  </main>
+  <footer class="relative bg-gray-300 pt-8 pb-6">
+    <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+      style="height: 80px; transform: translateZ(0px);">
+      <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+        version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+        <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap">
+        <div class="w-full lg:w-6/12 px-4">
+          <h4 class="text-3xl font-semibold">Let's keep in touch!</h4>
+          <h5 class="text-lg mt-0 mb-2 text-gray-700">
+            Find us on any of these platforms.
+          </h5>
+          <div class="mt-6">
+            <a href="https://twitter.com/acmiiitd">
+              <button
+                class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                type="button">
+                <i class="flex fa fa-twitter"></i>
+              </button>
+            </a>
+            <a href="https://www.facebook.com/acmiiitd/">
+              <button
+                class="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                type="button">
+                <i class="flex fa fa-facebook-square"></i>
+              </button>
+            </a>
+            <a href="mailto:acm@iiitd.ac.in">
+              <button
+                class="bg-white text-red-500 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                type="button">
+                <i class="flex fa fa-google"></i>
+              </button>
+            </a>
+            <a href="https://www.instagram.com/acmiiitd/">
+              <button
+                class="bg-white text-pink-500 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                type="button">
+                <i class="flex fa fa-instagram"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <hr class="my-6 border-gray-400" />
+      <div class="flex flex-wrap items-center md:justify-between justify-center">
+        <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+          <div class="text-sm text-gray-600 font-semibold py-1">
+            Website developed and maintained by
+            <a href="https://github.com/YuvrajSingh808" class="text-gray-600 hover:text-gray-900">Yuvraj Singh</a>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
+<script>
+  function toggleNavbar(collapseID) {
+    document.getElementById(collapseID).classList.toggle("hidden");
+    document.getElementById(collapseID).classList.toggle("block");
+  }
+</script>
 
 </html>
