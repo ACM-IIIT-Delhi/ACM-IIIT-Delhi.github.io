@@ -10,7 +10,7 @@ module.exports = {
             preset: 'default',
         }),
         purgecss({
-            content: ['*.html', 'src/*.html'],
+            content: ['*.html'],
             defaultExtractor: content => content.match(/[\w-:/]+(?<!:)/g) || []
         }),
         autoprefixer
