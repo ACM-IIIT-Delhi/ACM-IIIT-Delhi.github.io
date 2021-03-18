@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,16 +6,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="/src/Images/logo.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '/src/Images/logo.png' %}" />
     <script src="https://kit.fontawesome.com/08e69763c2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="dist/tailwind.css">
+    <link rel="stylesheet" href="{% static 'dist/tailwind.css' %}">
     <title>Members | ACM IIIT-D</title>
 </head>
 
 <body class="text-gray-800 antialiased">
     <nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
         <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
-            <img src="/src/Images/logo.png" height="35" width="35" class="mr-8">
+            <img src="{% static '/src/Images/logo.png' %}" height="35" width="35" class="mr-8">
             <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                 <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white"
                     href="#">ACM IIIT-Delhi
@@ -93,40 +94,40 @@
                 <div class="flex flex-wrap mx-auto">
                     <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
                         <div class="px-6">
-                            <img alt="..." src="src/Images/members/AryanTaneja.jpg"
+                            <img alt="..." src="{% static 'src/Images/members/AryanTaneja.jpg' %}"
                                 class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
                             <div class="pt-6 text-center">
                                 <h5 class="text-xl font-bold">Aryan Taneja</h5>
                                 <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
                                     Batch of 2023
                                 </p>
-                                
+
                             </div>
                         </div>
                     </div>
                     <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
                         <div class="px-6">
-                            <img alt="..." src="src/Images/members/GitanshRajSatija.jpg"
+                            <img alt="..." src="{% static 'src/Images/members/GitanshRajSatija.jpg' %}"
                                 class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
                             <div class="pt-6 text-center">
                                 <h5 class="text-xl font-bold">Gitansh Raj Satija</h5>
                                 <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
                                     Batch of 2023
                                 </p>
-                                
+
                             </div>
                         </div>
                     </div>
                     <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
                         <div class="px-6">
-                            <img alt="..." src="src/Images/members/GursimranKaur.jpg"
+                            <img alt="..." src="{% static 'src/Images/members/GursimranKaur.jpg' %}"
                                 class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
                             <div class="pt-6 text-center">
                                 <h5 class="text-xl font-bold">Gursimran Kaur</h5>
                                 <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
                                     Batch of 2022
                                 </p>
-                                
+
 
                             </div>
                         </div>
@@ -136,20 +137,33 @@
             <div class="container mx-auto px-4 pt-20">
                 <div class="flex flex-wrap justify-center text-center mb-24">
                     <div class="w-full lg:w-6/12 px-4">
-                        <h2 class="text-4xl font-semibold">Web master</h2>
+                        <h2 class="text-4xl font-semibold">Web Developers</h2>
                     </div>
                 </div>
                 <div class="flex flex-wrap mx-auto">
                     <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
                         <div class="px-6">
-                            <img alt="..." src="src/Images/members/YuvrajSingh.jpg"
+                            <img alt="..." src="{% static 'src/Images/members/YuvrajSingh.jpg' %}"
                                 class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
                             <div class="pt-6 text-center">
                                 <h5 class="text-xl font-bold">Yuvraj Singh</h5>
                                 <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
                                     Batch of 2024
                                 </p>
-                                
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+                        <div class="px-6">
+                            <img alt="..." src="{% static 'src/Images/members/SushantGupta1.jpg' %}"
+                                class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
+                            <div class="pt-6 text-center">
+                                <h5 class="text-xl font-bold">Sushant Gupta</h5>
+                                <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                                    Batch of 2023
+                                </p>
+
                             </div>
                         </div>
                     </div>
@@ -164,14 +178,14 @@
                 <div class="flex flex-wrap mx-auto">
                     <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
                         <div class="px-6">
-                            <img alt="..." src="src/Images/members/SaarthakGupta.jpg"
+                            <img alt="..." src="{% static 'src/Images/members/SaarthakGupta.jpg' %}"
                                 class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
                             <div class="pt-6 text-center">
                                 <h5 class="text-xl font-bold">Saarthak Gupta</h5>
                                 <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
                                     Batch of 2023
                                 </p>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -186,160 +200,160 @@
                 <div class="flex flex-wrap mx-auto">
                     <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 pb-6">
                         <div class="px-6">
-                            <img alt="..." src="src/Images/members/ShivamAgrawal.png"
+                            <img alt="..." src="{% static 'src/Images/members/ShivamAgrawal.png' %}"
                                 class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
                             <div class="pt-6 text-center">
                                 <h5 class="text-xl font-bold">Shivam Agrawal</h5>
                                 <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
                                     Batch of 2024
                                 </p>
-                                
+
                             </div>
                         </div>
                     </div>
                     <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 pb-6">
                         <div class="px-6">
-                            <img alt="..." src="src/Images/members/MuditBalooja.jpg"
+                            <img alt="..." src="{% static 'src/Images/members/MuditBalooja.jpg' %}"
                                 class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
                             <div class="pt-6 text-center">
                                 <h5 class="text-xl font-bold">Mudit Balooja</h5>
                                 <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
                                     Batch of 2023
                                 </p>
-                                
+
                             </div>
                         </div>
                     </div>
                     <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 pb-6">
                         <div class="px-6">
-                            <img alt="..." src="src/Images/members/ManavSaspal.jpg"
+                            <img alt="..." src="{% static 'src/Images/members/ManavSaspal.jpg' %}"
                                 class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
                             <div class="pt-6 text-center">
                                 <h5 class="text-xl font-bold">Manav Saspal</h5>
                                 <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
                                     Batch of 2024
                                 </p>
-                                
+
 
                             </div>
                         </div>
                     </div>
                     <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 pb-6">
                         <div class="px-6">
-                            <img alt="..." src="src/Images/members/SiyaGarg.jpg"
+                            <img alt="..." src="{% static 'src/Images/members/SiyaGarg.jpg' %}"
                                 class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
                             <div class="pt-6 text-center">
                                 <h5 class="text-xl font-bold">Siya Garg</h5>
                                 <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
                                     Batch of 2024
                                 </p>
-                                
+
                             </div>
                         </div>
                     </div>
                     <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 pb-6">
                         <div class="px-6">
-                            <img alt="..." src="src/Images/members/AnushaTiwari.png"
+                            <img alt="..." src="{% static 'src/Images/members/AnushaTiwari.png' %}"
                                 class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
                             <div class="pt-6 text-center">
                                 <h5 class="text-xl font-bold">Anusha Tiwari</h5>
                                 <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
                                     Batch of 2024
                                 </p>
-                                
+
                             </div>
                         </div>
                     </div>
                     <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 pb-6">
                         <div class="px-6">
-                            <img alt="..." src="src/Images/members/NishkarshSaxena.jpg"
+                            <img alt="..." src="{% static 'src/Images/members/NishkarshSaxena.jpg' %}"
                                 class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
                             <div class="pt-6 text-center">
                                 <h5 class="text-xl font-bold">Nishkarsh Saxena</h5>
                                 <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
                                     M.Tech Batch of 2022
                                 </p>
-                                
+
 
                             </div>
                         </div>
                     </div>
                     <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 pb-6">
                         <div class="px-6">
-                            <img alt="..." src="src/Images/members/Garima Chopra.jpeg"
+                            <img alt="..." src="{% static 'src/Images/members/Garima Chopra.jpeg' %}"
                                 class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
                             <div class="pt-6 text-center">
                                 <h5 class="text-xl font-bold">Garima Chopra</h5>
                                 <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
                                     Batch of 2024
                                 </p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 pb-6">
-                        <div class="px-6">
-                            <img alt="..." src="src/Images/members/RahulBansal.jpg"
-                                class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
-                            <div class="pt-6 text-center">
-                                <h5 class="text-xl font-bold">Rahul Bansal</h5>
-                                <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                                    Batch of 2024
-                                </p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 pb-6">
-                        <div class="px-6">
-                            <img alt="..." src="src/Images/members/VibhuDubey.jpg"
-                                class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
-                            <div class="pt-6 text-center">
-                                <h5 class="text-xl font-bold">Vibhu Dubey</h5>
-                                <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                                    Batch of 2024
-                                </p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 pb-6">
-                        <div class="px-6">
-                            <img alt="..." src="src/Images/members/ManasviSingh.jpg"
-                                class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
-                            <div class="pt-6 text-center">
-                                <h5 class="text-xl font-bold">Manasvi Singh</h5>
-                                <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                                    Batch of 2023
-                                </p>
-                                
 
                             </div>
                         </div>
                     </div>
                     <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 pb-6">
                         <div class="px-6">
-                            <img alt="..." src="src/Images/members/VaniSikka.jpeg"
+                            <img alt="..." src="{% static 'src/Images/members/RahulBansal.jpg' %}"
+                                class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
+                            <div class="pt-6 text-center">
+                                <h5 class="text-xl font-bold">Rahul Bansal</h5>
+                                <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                                    Batch of 2024
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 pb-6">
+                        <div class="px-6">
+                            <img alt="..." src="{% static 'src/Images/members/VibhuDubey.jpg' %}"
+                                class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
+                            <div class="pt-6 text-center">
+                                <h5 class="text-xl font-bold">Vibhu Dubey</h5>
+                                <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                                    Batch of 2024
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 pb-6">
+                        <div class="px-6">
+                            <img alt="..." src="{% static 'src/Images/members/ManasviSingh.jpg' %}"
+                                class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
+                            <div class="pt-6 text-center">
+                                <h5 class="text-xl font-bold">Manasvi Singh</h5>
+                                <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                                    Batch of 2023
+                                </p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 pb-6">
+                        <div class="px-6">
+                            <img alt="..." src="{% static 'src/Images/members/VaniSikka.jpeg' %}"
                                 class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
                             <div class="pt-6 text-center">
                                 <h5 class="text-xl font-bold">Vani Sikka</h5>
                                 <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
                                     Batch of 2023
                                 </p>
-                                
+
                             </div>
                         </div>
                     </div>
                     <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4 pb-6">
                         <div class="px-6">
-                            <img alt="..." src="src/Images/members/HrithikMalhotra.jpg"
+                            <img alt="..." src="{% static 'src/Images/members/HrithikMalhotra.jpg' %}"
                                 class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
                             <div class="pt-6 text-center">
                                 <h5 class="text-xl font-bold">Hrithik Malhotra</h5>
                                 <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
                                     Batch of 2022
                                 </p>
-                                
+
                             </div>
                         </div>
                     </div>

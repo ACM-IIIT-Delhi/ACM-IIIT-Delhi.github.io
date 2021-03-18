@@ -1,21 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <!-- <link rel="shortcut icon" href="./assets/img/favicon.ico" /> -->
-  <link rel="shortcut icon" type="image/x-icon" href="/src/Images/logo.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="{% static '/src/Images/logo.png' %}" />
   <script src="https://kit.fontawesome.com/08e69763c2.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="dist/tailwind.css">
+  <link rel="stylesheet" href="{% static 'dist/tailwind.css' %}">
   <title>ACM IIIT Delhi | Student Chapter</title>
 </head>
 
 <body class="text-gray-800 antialiased">
   <nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
     <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
-      <img src="/src/Images/logo.png" height="35" width="35" class="mr-8">
+      <img src="{% static '/src/Images/logo.png' %}" height="35" width="35" class="mr-8">
       <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
         <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white"
           href="#">ACM IIIT-Delhi
@@ -341,7 +341,7 @@
         <div class="flex flex-wrap">
           <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
             <div class="px-6">
-              <img alt="..." src="src/Images/members/AryanTaneja.jpg" class="shadow-lg rounded-full max-w-full mx-auto"
+              <img alt="..." src="{% static 'src/Images/members/AryanTaneja.jpg' %}" class="shadow-lg rounded-full max-w-full mx-auto"
                 style="max-width: 120px;" />
               <div class="pt-6 text-center">
                 <h5 class="text-xl font-bold">Aryan Taneja</h5>
@@ -353,7 +353,7 @@
           </div>
           <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
             <div class="px-6">
-              <img alt="..." src="src/Images/members/GitanshRajSatija.jpg"
+              <img alt="..." src="{% static 'src/Images/members/GitanshRajSatija.jpg' %}"
                 class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
               <div class="pt-6 text-center">
                 <h5 class="text-xl font-bold">Gitansh Raj Satija</h5>
@@ -365,7 +365,7 @@
           </div>
           <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
             <div class="px-6">
-              <img alt="..." src="src/Images/members/GursimranKaur.jpg"
+              <img alt="..." src="{% static 'src/Images/members/GursimranKaur.jpg' %}"
                 class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
               <div class="pt-6 text-center">
                 <h5 class="text-xl font-bold">Gursimran Kaur</h5>
@@ -377,17 +377,17 @@
           </div>
           <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
             <div class="px-6">
-                <img alt="..." src="src/Images/members/YuvrajSingh.jpg"
+                <img alt="..." src="{% static 'src/Images/members/YuvrajSingh.jpg' %}"
                     class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
                 <div class="pt-6 text-center">
                     <h5 class="text-xl font-bold">Yuvraj Singh</h5>
                     <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                        Web master
+                        Front-End Developer
                     </p>
                 </div>
             </div>
         </div>
-          <a href="members.html" class="mx-auto">
+          <a href="{% url 'members' %}" class="mx-auto">
             <div
               class="mt-16 border-4 h-30 w-72 text-pink-500 hover:text-white hover:bg-pink-500 text-center rounded-full p-4 border-pink-500 font-bold">
               Click here to see our full team
