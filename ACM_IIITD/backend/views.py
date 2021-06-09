@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from .models import image
 def index(request):
     return render(request, "index.html")
 

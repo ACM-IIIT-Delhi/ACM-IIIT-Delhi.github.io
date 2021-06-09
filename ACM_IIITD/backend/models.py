@@ -11,7 +11,7 @@ class position(models.IntegerChoices):
 
 
 class event(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50)  # heading
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
     link = models.URLField()
