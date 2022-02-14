@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+<script src="{% static 'src/js/blog_template.js' %}"></script>
+<main>
+    <div id="header" class="bg-white fixed w-full z-10 top-0 hidden animated" style="opacity: .95;">
+        <div id="progress" class="h-1 bg-white shadow"
+            style="background:linear-gradient(to right, rgba(236, 72, 153) var(--scroll), transparent 0);">
+        </div>
+    </div>
+    <div class="relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 75vh;">
+        <div class="absolute top-0 w-full h-full bg-center bg-cover"
+            style='background-image: url({% static "src/Images/campus.jpg" %});'>
+            <span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span>
+        </div>
+        <div class="container relative mx-auto">
+            <div class="items-center flex flex-wrap">
+                <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+                    <div class="pr-12">
+                        <h1 class="text-white font-semibold text-5xl">
+                            The blog
+                        </h1>
+                        <p class="mt-4 text-lg text-gray-300">
+                            “We don't write much here..”
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center pt-16 md:pt-32">
+        <p class="text-sm md:text-base text-pink-500 font-bold"> {{blog.created_at}} </p>
+        <h1 class="font-bold break-normal text-3xl md:text-5xl">{{blog.heading}}</h1>
+    </div>
+
+    <!--image-->
+    <div class="cover container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded" style="background-image:url('{{ blog.image_set.all.0.content.url }}'); height:75vh;">
+
+    </div>
+
+    <!--Container-->
+    <div class="container max-w-5xl mx-auto -mt-32">
+
+        <div class="mx-0 sm:mx-6">
+
+            <div class="bg-white w-full p-8 md:p-24 text-xl md:text-2xl text-gray-800 leading-normal"
+                style="font-family:Georgia,serif;">
+                {% for i in blog.paragraph_set.all %}
+                {{i.content.media}}
+                {{i.content | safe}}
+                {% endfor %}
+            </div>
+
+
+            <!--Author-->
+            <div class="flex w-full items-center font-sans p-8 md:p-24">
+                <img class="w-10 h-10 rounded-full mr-4" src="{{blog.author.image.url}}" alt="Avatar of Author">
+                <div class="flex-1">
+                    <p class="text-base font-bold text-base md:text-xl leading-none">{{blog.author.name}}</p>
+                    <p class="text-gray-600 text-xs md:text-base">{{blog.author.designation}}</p>
+                </div>
+                <!-- <div class="justify-end">
+                    <button
+                        class="bg-transparent border border-gray-500 hover:border-pink-500 text-xs text-gray-500 hover:text-pink-500 font-bold py-2 px-4 rounded-full">Read
+                        More</button>
+                </div> -->
+            </div>
+        </div>
+
+
+    </div>
+</main>
+{% endblock %}

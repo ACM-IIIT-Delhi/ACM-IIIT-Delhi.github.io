@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '/src/Images/logo.png' %}" />
+    <script src="https://kit.fontawesome.com/08e69763c2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.0-canary.13/tailwind.min.css">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+</head>
+
+<body class="text-gray-800 antialiased">
+    <nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
+        <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+            <img src="{% static '/src/Images/logo.png' %}" height="35" width="35" class="mr-8">
+            <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+                <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white"
+                    href="{% url 'index'%}">ACM IIIT-Delhi
+                </a>
+                <button
+                    class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                    type="button" onclick="toggleNavbar('example-collapse-navbar')">
+                    <i class="text-white fa fa-bars"></i>
+                </button>
+            </div>
+            <div class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
+                id="example-collapse-navbar">
+                <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+                    <li class="flex items-center">
+                        <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                            href="https://www.facebook.com/acmiiitd/"><i
+                                class="lg:text-gray-300 hover:text-blue-800 text-gray-500 fab fa-facebook text-lg leading-lg "></i><span
+                                class="lg:hidden inline-block ml-2">Facebook</span></a>
+                    </li>
+                    <li class="flex items-center">
+                        <a class="lg:text-white lg:hover:text-red-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                            href="https://twitter.com/acmiiitd"><i
+                                class="lg:text-gray-300 hover:text-blue-600 text-gray-500 fab fa-twitter text-lg leading-lg "></i><span
+                                class="lg:hidden inline-block ml-2">Twitter</span></a>
+                    </li>
+                    <li class="flex items-center">
+                        <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                            href="https://instagram.com/acmiiitd/"><i
+                                class="lg:text-gray-300 text-gray-500 fab fa-instagram text-lg leading-lg "></i><span
+                                class="lg:hidden inline-block ml-2">Instagram</span></a>
+                    </li>
+                    <li class="flex items-center">
+                        <button
+                            class="lg:text-white hover:text-gray-800 active:bg-yellow-100 text-xs font-bold uppercase px-4 py-2 rounded hover:bg-white border-1 border-white focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+                            type="button" style="transition: all 0.15s ease 0s;">
+                            <a href="{% url 'blogHome' %}">
+                                Blog
+                            </a>
+                        </button>
+                        <button
+                            class="lg:text-white hover:text-gray-800 active:bg-yellow-100 text-xs font-bold uppercase px-4 py-2 rounded hover:bg-white border-1 border-white focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+                            type="button" style="transition: all 0.15s ease 0s;">
+                            <a href="">
+                            Events
+                            </a>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block main %}
+    {% endblock %}
+    <footer class="relative bg-gray-300 pt-8 pb-6">
+        <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+            style="height: 80px; transform: translateZ(0px);">
+            <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap">
+                <div class="w-full lg:w-6/12 px-4">
+                    <h4 class="text-3xl font-semibold">Let's keep in touch!</h4>
+                    <h5 class="text-lg mt-0 mb-2 text-gray-700">
+                        Find us on any of these platforms.
+                    </h5>
+                    <div class="mt-6">
+                        <a href="https://twitter.com/acmiiitd">
+                            <button
+                                class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                                type="button">
+                                <i class="flex fa fa-twitter"></i>
+                            </button>
+                        </a>
+                        <a href="https://www.facebook.com/acmiiitd/">
+                            <button
+                                class="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                                type="button">
+                                <i class="flex fa fa-facebook-square"></i>
+                            </button>
+                        </a>
+                        <a href="mailto:acm@iiitd.ac.in">
+                            <button
+                                class="bg-white text-red-500 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                                type="button">
+                                <i class="flex fa fa-google"></i>
+                            </button>
+                        </a>
+                        <a href="https://www.instagram.com/acmiiitd/">
+                            <button
+                                class="bg-white text-pink-500 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                                type="button">
+                                <i class="flex fa fa-instagram"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="my-6 border-gray-400" />
+            <div class="flex flex-wrap items-center md:justify-between justify-center">
+                <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+                    <div class="text-sm text-gray-600 font-semibold py-1">
+                        Website Developed by <a href="https://github.com/sushantg2001" target="_blank"
+                            class="text-gray-600 hover:text-gray-900">Sushant Gupta and <a
+                                href="https://github.com/YuvrajSingh808" target="_blank"
+                                class="text-gray-600 hover:text-gray-900">Yuvraj
+                                Singh</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

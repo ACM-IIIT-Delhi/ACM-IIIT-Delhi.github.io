@@ -1,0 +1,32 @@
+{
+  "name": "ACM-IIIT-Delhi.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss src/css/main.css -o ./dist/tailwind.css",
+    "watch": "watch \"npm run build:css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ACM-IIIT-Delhi/ACM-IIIT-Delhi.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ACM-IIIT-Delhi/ACM-IIIT-Delhi.github.io/issues"
+  },
+  "homepage": "https://github.com/ACM-IIIT-Delhi/ACM-IIIT-Delhi.github.io#readme",
+  "devDependencies": {
+    "tailwindcss": "^2.0.2"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.0",
+    "autoprefixer": "^10.2.4",
+    "cssnano": "^4.1.10",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
+    "watch": "^1.0.2"
+  }
+}
